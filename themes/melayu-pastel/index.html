@@ -6,63 +6,385 @@
     <title>Melayu Pastel - Template Undangan</title>
 
     <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      @font-face {
+        font-family: "Work Sans";
+        src: url("assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "Sacramento";
+        src: url("assets/fonts/Sacramento/Sacramento-Regular.ttf") format("truetype");
+      }
+
+      .font-work-sans {
+        font-family: "Work Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+
+      .font-sacramento {
+        font-family: "Sacramento", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
   </head>
-  <body class="flex justify-center">
-    <main class="w-full sm:max-w-[360px] md:max-w-[390px] bg-white shadow overflow-hidden">
-      <section class="relative h-screen flex items-center justify-center">
-        <!-- Background -->
+  <body class="flex justify-center font-work-sans">
+    <main class="w-full sm:max-w-[360px] md:max-w-[390px] bg-white shadow">
+      <!-- Section cover -->
+      <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-          <img src="assets/bg.png" class="w-full h-full object-cover" />
+          <img src="assets/images/bg.png" alt="Background" class="w-full h-full object-cover" />
         </div>
 
-        <!-- Ornamen -->
         <div class="absolute inset-0 z-10 pointer-events-none">
-          <img src="assets/tm-1.png" class="absolute top-0 left-0 w-full z-30" />
-          <img src="assets/tl-1.png" class="absolute top-0 left-0 w-full z-20" />
-          <img src="assets/tr-1.png" class="absolute top-0 right-0 w-full z-20" />
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
 
-          <img src="assets/left-1.png" class="absolute left-0 w-full z-15" />
-          <img src="assets/right-1.png" class="absolute right-0 w-full z-15" />
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
 
-          <img src="assets/bl-1.png" class="absolute bottom-0 left-0 w-full z-25" />
-          <img src="assets/br-1.png" class="absolute bottom-0 right-0 w-full z-25" />
-          <img src="assets/bm-1.png" class="absolute bottom-0 left-0 w-full z-5" />
-          <img src="assets/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
         </div>
 
-        <!-- Konten -->
-        <div class="relative z-20 flex flex-col items-center justify-center h-full p-6">
-          <div class="relative w-full max-w-[320px] rounded-3xl shadow-lg overflow-hidden text-center">
-            <!-- Background blur card -->
-            <div class="absolute inset-0 bg-[#f8efcfd6]/90 border-2 border-[#4f4f88] rounded-3xl"></div>
+        <div class="relative p-16 z-20">
+          <div class="relative w-full text-center">
+            <div class="absolute inset-0 bg-[#f8efcf]/70 border-2 border-[#4f4f88] rounded-full"></div>
 
-            <!-- Isi card -->
-            <div class="relative z-10 p-6">
-              <img src="assets/bride-groom.jpg" alt="Bride and Groom" class="h-45 w-45 mx-auto rounded-full" />
+            <div class="relative p-2 z-10">
+              <div class="w-full h-[160px] rounded-t-full overflow-hidden">
+                <img src="assets/images/bride-groom.jpg" alt="Bride & Groom" class="w-full h-full object-cover" />
+              </div>
 
-              <p class="mt-2 tracking-widest text-sm text-[#f2869a]">The Wedding Of</p>
+              <div class="p-4 pb-12">
+                <p class="text-sm tracking-widest text-[#f2869a]">The Wedding Of</p>
 
-              <h1 class="mt-1 text-2xl font-bold text-[#4f4f88]">
-                Bride
-                <span class="mx-1">&</span>
-                Groom
-              </h1>
+                <h1 class="mt-2 text-3xl font-bold text-[#4f4f88] font-sacramento">
+                  Wanita
+                  <span class="mx-1">&</span>
+                  Pria
+                </h1>
 
-              <p class="mt-4 text-sm text-[#f2869a]">Kepada Yth,</p>
-              <p class="mt-1 text-sm text-[#f2869a]">Bapak/Ibu/Saudara/i</p>
+                <p class="mt-2 text-xs tracking-widest text-[#4f4f88]/70">Minggu, 12 Oktober 2026</p>
 
-              <p class="mt-3 font-semibold text-[#4f4f88]">Nama Tamu</p>
+                <p class="mt-4 text-sm text-[#f2869a]">Kepada Yth,</p>
+                <p class="text-sm text-[#f2869a]">Bapak/Ibu/Saudara/i</p>
+                <p class="font-semibold text-[#4f4f88]">Nama Tamu</p>
 
-              <button class="mt-6 px-4 py-2 rounded-full text-sm text-gray-100 font-semibold shadow hover:scale-105 transition cursor-pointer bg-[#f2869a] hover:bg-[#4f4f88] duration-300">Buka Undangan</button>
+                <button id="btnOpen" class="mt-4 px-4 py-2 text-sm font-semibold text-white rounded-full shadow transition hover:scale-105 bg-[#f2869a] hover:bg-[#4f4f88] duration-300 cursor-pointer">Buka Undangan</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Quote -->
-      <section id="kutipan" class="p-6 bg-gray-50 text-center">
-        <p class="italic text-gray-600">"Dan di antara tanda-tanda kebesaran-Nya..."</p>
+      <!-- Section quote -->
+      <section id="quote" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" alt="Background" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-16 text-center">
+          <h1 class="text-3xl font-bold text-[#f2869a] font-sacramento">Kutipan</h1>
+
+          <div class="mt-6 max-w-3xl space-y-4 px-4">
+            <p class="text-[#4f4f88]">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
+
+            <p class="text-[#4f4f88] font-semibold">(Surah Ar-Rum : 21)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section bride -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" alt="Background" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-16 flex flex-col items-center justify-center text-center">
+          <div class="w-[160px] h-[284px] rounded-t-full overflow-hidden">
+            <img src="assets/images/bride.jpg" alt="Bride" class="w-full h-full object-cover" />
+          </div>
+
+          <h2 class="mt-6 text-3xl font-semibold tracking-wide text-[#f2869a] font-sacramento">Wanita</h2>
+
+          <p class="mt-2 text-sm text-[#4f4f88]/70">Anak pertama dari</p>
+          <p class="text-sm text-[#4f4f88] font-semibold">Bapak A & Ibu B</p>
+
+          <a href="https://www.instagram.com" class="mt-4 px-4 py-2 text-sm font-semibold text-white rounded-full shadow transition hover:scale-105 bg-[#f2869a] hover:bg-[#4f4f88] duration-300 cursor-pointer" target="_blank">@instagram</a>
+        </div>
+      </section>
+
+      <!-- Section groom -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" alt="Background" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-16 flex flex-col items-center justify-center text-center">
+          <div class="w-[160px] h-[284px] rounded-t-full overflow-hidden">
+            <img src="assets/images/groom.jpg" alt="Groom" class="w-full h-full object-cover" />
+          </div>
+
+          <h2 class="mt-6 text-3xl font-semibold tracking-wide text-[#f2869a] font-sacramento">Pria</h2>
+
+          <p class="mt-2 text-sm text-[#4f4f88]/70">Anak kedua dari</p>
+          <p class="text-sm text-[#4f4f88] font-semibold">Bapak A & Ibu B</p>
+
+          <a href="https://www.instagram.com" class="mt-4 px-4 py-2 text-sm font-semibold text-white rounded-full shadow transition hover:scale-105 bg-[#f2869a] hover:bg-[#4f4f88] duration-300 cursor-pointer" target="_blank">@instagram</a>
+        </div>
+      </section>
+
+      <!-- Section event -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" alt="Background" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-22 flex flex-col items-center justify-center text-center space-y-10">
+          <div class="bg-white/70 backdrop-blur-sm border border-[#4f4f88]/40 rounded-3xl px-8 py-10 max-w-sm w-full shadow-lg text-[#4f4f88]">
+            <div class="flex justify-center -mt-16">
+              <div class="w-12 h-12 rounded-full bg-[#f2869a] flex items-center justify-center shadow-md text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h12l4 6-10 13L2 9Z"></path>
+                  <path d="M11 3 8 9l4 13 4-13-3-6"></path>
+                  <path d="M2 9h20"></path>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="mt-4 text-3xl font-semibold tracking-wide text-[#f2869a] font-sacramento">Akad Nikah</h3>
+
+            <div class="mt-2 w-full h-[2px] bg-[#4f4f88]/50 mx-auto"></div>
+
+            <p class="mt-4 text-sm">Minggu, 12 Oktober 2026</p>
+            <p class="text-base font-medium">08:00 – 10:00 WIB</p>
+
+            <div class="mt-4 text-sm leading-relaxed">
+              <p class="font-medium">Kediaman Mempelai</p>
+              <p class="opacity-80">Jl. Komp. Guru SD Patimura Telanaipura, Kota Jambi.</p>
+            </div>
+
+            <a href="#" class="mt-4 inline-block px-6 py-2 rounded-full border border-[#4f4f88] text-sm font-medium hover:bg-[#4f4f88] hover:text-white transition duration-300">Petunjuk Lokasi</a>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur-sm border border-[#4f4f88]/40 rounded-3xl px-8 py-10 max-w-sm w-full shadow-lg text-[#4f4f88]">
+            <div class="flex justify-center -mt-16">
+              <div class="w-12 h-12 rounded-full bg-[#f2869a] flex items-center justify-center shadow-md text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h12l4 6-10 13L2 9Z"></path>
+                  <path d="M11 3 8 9l4 13 4-13-3-6"></path>
+                  <path d="M2 9h20"></path>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="mt-4 text-3xl font-semibold tracking-wide text-[#f2869a] font-sacramento">Resepsi</h3>
+
+            <div class="mt-2 w-full h-[2px] bg-[#4f4f88]/50 mx-auto"></div>
+
+            <p class="mt-4 text-sm">Minggu, 12 Oktober 2026</p>
+            <p class="text-base font-medium">10:00 – 16:00 WIB</p>
+
+            <div class="mt-4 text-sm leading-relaxed">
+              <p class="font-medium">Kediaman Mempelai</p>
+              <p class="opacity-80">Jl. Komp. Guru SD Patimura Telanaipura, Kota Jambi</p>
+            </div>
+
+            <a href="#" class="mt-4 inline-block px-6 py-2 rounded-full border border-[#4f4f88] text-sm font-medium hover:bg-[#4f4f88] hover:text-white transition duration-300">Petunjuk Lokasi</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section love story -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-16 max-w-md mx-auto text-[#4f4f88]">
+          <h1 class="text-3xl font-bold font-sacramento text-[#f2869a] text-center">Kisah Cinta</h1>
+
+          <!-- Foto -->
+          <div class="mt-6 flex justify-center">
+            <div class="w-[200px] h-[200px] rounded-xl overflow-hidden border-2 border-[#4f4f88]/50 shadow-md">
+              <img src="assets/images/bride-groom.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="mt-4 relative z-30">
+            <!-- Garis utama -->
+            <span class="absolute top-0 bottom-0 w-1 bg-[#4f4f88]/50 rounded-full"></span>
+
+            <!-- Items -->
+            <div class="ml-6 space-y-4">
+              <!-- Item -->
+              <div class="relative">
+                <!-- Card bubble -->
+                <div class="relative bg-white backdrop-blur-sm border border-[#4f4f88]/30 rounded-2xl p-4 shadow-md">
+                  <!-- Ekor bubble -->
+                  <span class="absolute -left-2 top-6 w-4 h-4 bg-white border-l border-b border-[#4f4f88]/30 rotate-45 backdrop-blur-sm"></span>
+
+                  <h3 class="font-semibold text-lg text-[#f2869a]">Awal Pertemuan</h3>
+                  <p class="text-sm opacity-80 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="relative">
+                <div class="relative bg-white backdrop-blur-sm border border-[#4f4f88]/30 rounded-2xl p-4 shadow-md">
+                  <span class="absolute -left-2 top-6 w-4 h-4 bg-white border-l border-b border-[#4f4f88]/30 rotate-45 backdrop-blur-sm"></span>
+
+                  <h3 class="font-semibold text-lg text-[#f2869a]">Tunangan</h3>
+                  <p class="mt-2 text-sm opacity-80 leading-relaxed">Ullam minima facilis iure saepe quos.</p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="relative">
+                <div class="relative bg-white backdrop-blur-sm border border-[#4f4f88]/30 rounded-2xl p-4 shadow-md">
+                  <span class="absolute -left-2 top-6 w-4 h-4 bg-white border-l border-b border-[#4f4f88]/30 rotate-45 backdrop-blur-sm"></span>
+
+                  <h3 class="font-semibold text-lg text-[#f2869a]">Menikah</h3>
+                  <p class="mt-2 text-sm opacity-80 leading-relaxed">Quisquam nostrum dolores magnam laboriosam repellendus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section gallery -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/bg.png" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="assets/images/tm-1.png" class="absolute top-0 left-0 w-full z-50" />
+          <img src="assets/images/tl-1.png" class="absolute top-0 left-0 w-full z-30" />
+          <img src="assets/images/tr-1.png" class="absolute top-0 right-0 w-full z-30" />
+          <img src="assets/images/left-1.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/right-1.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-full z-20" />
+          <img src="assets/images/bl-1.png" class="absolute bottom-0 left-0 w-full z-40" />
+          <img src="assets/images/br-1.png" class="absolute bottom-0 right-0 w-full z-40" />
+          <img src="assets/images/bm-1.png" class="absolute bottom-0 left-0 w-full z-0" />
+          <img src="assets/images/bm-2.png" class="absolute bottom-0 left-0 w-full z-10" />
+        </div>
+
+        <div class="relative z-20 px-6 py-16 max-w-md mx-auto text-[#4f4f88]">
+          <h1 class="text-3xl font-bold font-sacramento text-[#f2869a] text-center">Galeri</h1>
+
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="aspect-square rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/bride.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/groom.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/bride.jpg" class="w-full h-full object-cover" />
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/groom.jpg" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      // if (performance.navigation.type === 1) {
+      //   location.replace(location.pathname);
+      // }
+
+      // document.body.classList.add("overflow-hidden");
+
+      const btn = document.getElementById("btnOpen");
+      const kutipan = document.getElementById("kutipan");
+
+      btn.addEventListener("click", () => {
+        document.body.classList.remove("overflow-hidden");
+
+        kutipan.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
